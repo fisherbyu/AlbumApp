@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Gabarito;
+  src: url
+    "https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap";
+}
+
+body {
+  font-family: Gabaritos;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  width: 300px;
+}
+
+.card:hover {
+  transform: translateX(10px);
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-text {
+  padding: 15px;
+}
