@@ -12,7 +12,8 @@ const ENV_VARIABLES = {
     dbHost: process.env.DATABASE_HOST,
     dbUser: process.env.DATABASE_USER,
     dbPassword: process.env.DATABASE_PASSWORD,
-    dbName: process.env.DATABASE_NAME
+    dbName: process.env.DATABASE_NAME,
+    appPort: parseInt(process.env.PORT)
 }
 
 //Define Knex Database Connection
@@ -29,7 +30,7 @@ const knex = require("knex")({
 
 //Define Constants:
 const path = require("path");
-const port = 3000;
+const port = ENV_VARIABLES.appPort;
 
 //Define + Configure Express:
 let express = require('express');
