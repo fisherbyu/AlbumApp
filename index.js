@@ -49,7 +49,7 @@ console.log("Server Started");
 //Define Routes:
 app.get("/", (req, res) => {
     res.render("index")
-})
+});
 
 
 //Activate Listener
