@@ -38,6 +38,8 @@ h1 {
 
 .card:hover {
   transform: translateX(10px);
+  transform: scale(102%);
+  transition: 300ms ease-in-out;
 }
 
 .card img {
