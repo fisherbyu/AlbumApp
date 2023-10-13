@@ -2,29 +2,38 @@ body {
   font-family: "Gabarito", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #8c9a9e;
+  background-color: #ffffff;
 }
 
 header {
-  background-color: #4f5165;
+  background-color: #dcbfae;
   color: #fff;
   text-align: center;
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
-
+h1 {
+  display: inline;
+  padding-left: 15px;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
 }
+.vin {
+  display: inline;
+}
 
 .card {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #e0cdbd;
+  padding: 15px;
   border-radius: 5px;
   margin: 10px;
   width: 300px;
+  box-shadow: 0 2px 8px rgb(156, 153, 149);
 }
 
 .card:hover {
@@ -39,6 +48,7 @@ header {
 
 .card-text {
   display: inline;
+  color: rgb(68, 35, 5);
   padding: 0 15px 0 15px;
   font-size: 1.25rem;
 }
