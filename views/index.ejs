@@ -18,163 +18,27 @@
       <h1>crates</h1>
     </header>
 
+
     <div class="container">
-      <div class="card">
-        <img
-          src="https://best-fit.transforms.svdcdn.com/production/albums/frank-ocean-blond-compressed-0933daea-f052-40e5-85a4-35e07dac73df.jpg?w=1200&h=1200&q=100&auto=format&fit=crop&dm=1643652677&s=3f177eac28ab76a7197a764624863b2a"
-          alt="Image 1"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">blond</p>
-            <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
+      <% for (let i = 0; i < data.length; i++) { %>
+        <div class="card">
+          <img
+            src="<%= data[i].image %>"
+            alt="Image <%= data[i].id %>"
+          />
+          <div class="card-text">
+            <div class="card-head">
+              <p class="card-text"><%= data[i].name %></p>
+              <div class="star-group">
+                <% for (let j = 0; j < data[i].rating; j++) {%>
+                  <img class="star fill" alt="star" src="img/star-line.svg" />
+                <% } %>
+              </div>
             </div>
+            <p class="sub"><%= data[i].artist %></p>
           </div>
-          <p class="sub">Frank Ocean</p>
         </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://best-fit.transforms.svdcdn.com/production/albums/Dominic-Fike-Sunburn-cover.png?w=1200&h=1212&q=100&auto=format&fit=crop&dm=1688473124&s=979b22b9feca574c622abeda118ace73"
-          alt="Image 2"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">sunburn</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Dominic Fike</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/1/15/Mac_Miller_-_Circles.png"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">circles</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Mac Miller</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/0/03/The_1975_%28album%29_by_The_1975.png"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">The 1975</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">The 1975</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://i.redd.it/b8u88fflzjo61.jpg" alt="Image 3" />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">rumours</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Fleetwood Mac</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/I/61IhE4t7bQL._UF1000,1000_QL80_.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">cash</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Johnny Cash</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://ichef.bbci.co.uk/news/976/cpsprodpb/10BBB/production/_113593586_swift.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">folklore</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Taylor Swift</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2734bc2f112800b4f738cc3fe1a"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">believe in me, who believes in you</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Aries</p>
-        </div>
-      </div>
+      <% } %>
     </div>
   </body>
 </html>
