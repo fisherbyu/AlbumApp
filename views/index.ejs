@@ -19,165 +19,22 @@
     </header>
 
     <div class="container">
+      <% for (let i = 0; i < data.length; i++) { %>
       <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/blond.jpg"
-          alt="Image 1"
-        />
+        <img src="<%= data[i].image %>" alt="Image <%= data[i].id %>" />
         <div class="card-text">
           <div class="card-head">
-            <p class="card-text">blond</p>
+            <p class="card-text"><%= data[i].name %></p>
             <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
+              <% for (let j = 0; j < data[i].rating; j++) {%>
+              <img class="star fill" alt="star" src="img/star-line.svg" />
+              <% } %>
             </div>
           </div>
-          <p class="sub">Frank Ocean</p>
+          <p class="sub"><%= data[i].artist %></p>
         </div>
       </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/Sunburn.jpg"
-          alt="Image 2"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">sunburn</p>
-            <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Dominic Fike</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/Circles.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">circles</p>
-            <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Mac Miller</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/1975.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">The 1975</p>
-            <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">The 1975</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/Rumours.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">rumours</p>
-            <div class="star-group">
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star fill" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Fleetwood Mac</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/AmericanIV.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">american iv</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Johnny Cash</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/folklore.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">folklore</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Taylor Swift</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://is531albumbucket.s3.amazonaws.com/AlbumCovers/smokemirrors.jpg"
-          alt="Image 3"
-        />
-        <div class="card-text">
-          <div class="card-head">
-            <p class="card-text">smoke + mirrors</p>
-            <div class="star-group">
-              <img class="star" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-fill.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-              <img class="star" alt="star" src="img/star-line.png" />
-            </div>
-          </div>
-          <p class="sub">Imagine Dragons</p>
-        </div>
-      </div>
+      <% } %>
     </div>
   </body>
 </html>

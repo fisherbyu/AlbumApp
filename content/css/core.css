@@ -73,9 +73,10 @@ h1 {
 
 .card-head {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .star-group {
-  padding-right: 15px;
+  padding: 0 15px 0 15px;
 }

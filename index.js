@@ -24,7 +24,6 @@ const knex = require("knex")({
         user : ENV_VARIABLES.dbUser,
         password : ENV_VARIABLES.dbPassword,
         database : ENV_VARIABLES.dbName,
-        port: 5432
     }
 });
 
@@ -49,7 +48,14 @@ console.log("Server Started");
 
 //Define Routes:
 app.get("/", (req, res) => {
-    res.render("index")
+    data = {}
+    knex.select().from("album").then(data => {
+        console.log(data)
+        res.render("index", {data : data});
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 
