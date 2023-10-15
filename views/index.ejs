@@ -18,26 +18,22 @@
       <h1>crates</h1>
     </header>
 
-
     <div class="container">
       <% for (let i = 0; i < data.length; i++) { %>
-        <div class="card">
-          <img
-            src="<%= data[i].image %>"
-            alt="Image <%= data[i].id %>"
-          />
-          <div class="card-text">
-            <div class="card-head">
-              <p class="card-text"><%= data[i].name %></p>
-              <div class="star-group">
-                <% for (let j = 0; j < data[i].rating; j++) {%>
-                  <img class="star fill" alt="star" src="img/star-line.svg" />
-                <% } %>
-              </div>
+      <div class="card">
+        <img src="<%= data[i].image %>" alt="Image <%= data[i].id %>" />
+        <div class="card-text">
+          <div class="card-head">
+            <p class="card-text"><%= data[i].name %></p>
+            <div class="star-group">
+              <% for (let j = 0; j < data[i].rating; j++) {%>
+              <img class="star fill" alt="star" src="img/star-line.svg" />
+              <% } %>
             </div>
-            <p class="sub"><%= data[i].artist %></p>
           </div>
+          <p class="sub"><%= data[i].artist %></p>
         </div>
+      </div>
       <% } %>
     </div>
   </body>
