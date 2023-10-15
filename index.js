@@ -50,7 +50,6 @@ console.log("Server Started");
 app.get("/", (req, res) => {
     data = {}
     knex.select().from("album").then(data => {
-        console.log(data)
         res.render("index", {data : data});
     }).catch(err => {
         console.log(err);
