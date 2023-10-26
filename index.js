@@ -14,11 +14,11 @@ const ENV_VARIABLES = {
     dbPassword: process.env.DATABASE_PASSWORD,
     dbName: process.env.DATABASE_NAME,
     appPort: parseInt(process.env.PORT)
-}
+};
 
 //Define Knex Database Connection
 const knex = require("knex")({
-    client: "mysql",   //Alternatively  for postgres use: client: "pg",
+    client: "mysql",
     connection: {
         host : ENV_VARIABLES.dbHost,
         user : ENV_VARIABLES.dbUser,
@@ -36,7 +36,7 @@ let express = require('express');
 let app = express();
 
 //Define Static File Directory
-app.use(express.static("content"))
+app.use(express.static("content"));
 
 //Setup Form Access
 app.use(express.urlencoded({extended: true}));
@@ -60,4 +60,4 @@ app.get("/", (req, res) => {
 
 //Activate Listener
 app.listen(port, () => console.log("Listening Active, Server Operational"));
-console.log("Starting development server at http://localhost:" + port)
+console.log("Starting development server at http://localhost:" + port);
