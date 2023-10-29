@@ -21,7 +21,7 @@
     <div class="container">
       <% for (let i = 0; i < data.length; i++) { %>
       <div class="card">
-        <img src="<%= data[i].image %>" alt="Image <%= data[i].id %>" />
+        <img src="/img/albumCovers/<%= data[i].image %>.jpeg" alt="Image <%= data[i].id %>" />        
         <div class="card-text">
           <div class="card-head">
             <p class="card-text"><%= data[i].name %></p>
