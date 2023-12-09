@@ -7,23 +7,25 @@
 //Configure environment Variables:
 require('dotenv').config();
 
-//Extract Environment Variables
+// Extract Environment Variables
 const ENV_VARIABLES = {
     dbHost: process.env.DATABASE_HOST,
     dbUser: process.env.DATABASE_USER,
     dbPassword: process.env.DATABASE_PASSWORD,
     dbName: process.env.DATABASE_NAME,
+    dbPort: process.env.DB_PORT,
     appPort: parseInt(process.env.PORT)
 };
 
-//Define Knex Database Connection
+// Define Knex Database Connection
 const knex = require("knex")({
-    client: "mysql",
+    client: "mysql",   //Alternatively  for postgres use: client: "pg",
     connection: {
         host : ENV_VARIABLES.dbHost,
         user : ENV_VARIABLES.dbUser,
         password : ENV_VARIABLES.dbPassword,
         database : ENV_VARIABLES.dbName,
+        port: ENV_VARIABLES.dbPort
     }
 });
 
